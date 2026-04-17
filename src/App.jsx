@@ -1,121 +1,96 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
+    <div
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#f4f6f8',
+        fontFamily: 'Arial, sans-serif',
+      }}
+    >
+      <div
+        style={{
+          width: '360px',
+          background: 'white',
+          padding: '30px',
+          borderRadius: '12px',
+          boxShadow: '0 4px 14px rgba(0,0,0,0.12)',
+          textAlign: 'center',
+        }}
+      >
+        <h1 style={{ marginBottom: '10px' }}>Amplify Task 5 Demo</h1>
+        <h2 style={{ marginTop: '0', color: '#444' }}>Niranjan Paudel</h2>
+        <p style={{ color: '#666', marginBottom: '20px' }}>
+          Simulated sign in interface for AWS web application tutorial
+        </p>
+
+        <input
+          type="email"
+          placeholder="Email"
+          style={{
+            width: '100%',
+            padding: '12px',
+            marginBottom: '12px',
+            borderRadius: '8px',
+            border: '1px solid #ccc',
+            boxSizing: 'border-box',
+          }}
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          style={{
+            width: '100%',
+            padding: '12px',
+            marginBottom: '12px',
+            borderRadius: '8px',
+            border: '1px solid #ccc',
+            boxSizing: 'border-box',
+          }}
+        />
+
         <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          style={{
+            width: '100%',
+            padding: '12px',
+            border: 'none',
+            borderRadius: '8px',
+            background: '#232f3e',
+            color: 'white',
+            fontSize: '16px',
+            cursor: 'pointer',
+            marginBottom: '10px',
+          }}
         >
-          Count is {count}
+          Sign In
         </button>
-      </section>
 
-      <div className="ticks"></div>
+        <button
+          style={{
+            width: '100%',
+            padding: '12px',
+            border: '1px solid #232f3e',
+            borderRadius: '8px',
+            background: 'white',
+            color: '#232f3e',
+            fontSize: '16px',
+            cursor: 'pointer',
+          }}
+        >
+          Create Account
+        </button>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <p style={{ marginTop: '18px', fontSize: '14px', color: '#777' }}>
+          Sample user email: niranjan@example.com
+        </p>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
